@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
         if number == 1 {
             playerNumber.text = "<<< PLAYER ONE"
         }else{
-            playerNumber.text = "<<< PLAYER TWO"
+            playerNumber.text = "PLAYER TWO >>>"
         }
         angleSlider.isHidden = false
         velocitySlider.isHidden = false
