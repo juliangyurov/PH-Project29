@@ -164,7 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.changePlayer()
                 newGame.currentPlayer = self.currentPlayer
                 
-                let transition = SKTransition.doorway(withDuration: 1.5)
+                let transition = SKTransition.doorway(withDuration: 4.5)
                 self.view?.presentScene(newGame, transition: transition)
             }
         }
