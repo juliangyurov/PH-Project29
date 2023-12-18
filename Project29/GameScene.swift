@@ -141,10 +141,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bananaHit(building: secondNode, atPoint: contact.contactPoint)
         }
         if firstNode.name == "banana" && secondNode.name == "player1" {
+            self.viewController?.score2 += 1
             destroy(player: player1)
+            if self.viewController!.score2 >= 3 {
+                displayGameOver()
+             }
         }
         if firstNode.name == "banana" && secondNode.name == "player2" {
+            self.viewController?.score1 += 1
             destroy(player: player2)
+            if self.viewController!.score1 >= 3 {
+                displayGameOver()
+             }
         }
     }
     
@@ -156,16 +164,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.removeFromParent()
             banana.removeFromParent()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                let newGame = GameScene(size: self.size)
-                newGame.viewController = self.viewController
-                self.viewController?.currentGame = newGame
-                
-                self.changePlayer()
-                newGame.currentPlayer = self.currentPlayer
-                
-                let transition = SKTransition.doorway(withDuration: 4.5)
-                self.view?.presentScene(newGame, transition: transition)
+            if self.viewController!.score1 < 3 && self.viewController!.score2 < 3 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    let newGame = GameScene(size: self.size)
+                    newGame.viewController = self.viewController
+                    self.viewController?.currentGame = newGame
+                    
+                    self.changePlayer()
+                    newGame.currentPlayer = self.currentPlayer
+                    
+                    let transition = SKTransition.doorway(withDuration: 4.5)
+                    self.view?.presentScene(newGame, transition: transition)
+                }
             }
         }
     }
@@ -204,5 +214,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             banana = nil
             changePlayer()
         }
+    }
+    func displayGameOver() {
+        
+        self.viewController?.angleSlider.isHidden = true
+        self.viewController?.velocitySlider.isHidden = true
+        self.viewController?.angleLabel.isHidden = true
+        self.viewController?.velocityLabel.isHidden = true
+        self.viewController?.launchButton.isHidden = true
+        self.viewController?.playerNumber.isHidden = true
+        self.viewController?.player1Score.isHidden = true
+        self.viewController?.player2Score.isHidden = true
+        
+        let gameOverScene = GameOverScene(size: size)
+        gameOverScene.scaleMode = scaleMode
+        
+        let reveal = SKTransition.flipHorizontal(withDuration: 3.5)
+        view?.presentScene(gameOverScene, transition: reveal)
     }
 }

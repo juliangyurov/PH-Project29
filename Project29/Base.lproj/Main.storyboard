@@ -63,14 +63,38 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player1: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8w-xn-xk8">
+                                <rect key="frame" x="149" y="670" width="139.5" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player2: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHx-QI-sye">
+                                <rect key="frame" x="840.5" y="667" width="143.5" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="d8w-xn-xk8" secondAttribute="bottom" constant="15" id="ZbB-DZ-gbf"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="iHx-QI-sye" secondAttribute="trailing" constant="149" id="hMT-ll-vP9"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="iHx-QI-sye" secondAttribute="bottom" constant="18" id="kIL-zl-Khm"/>
+                            <constraint firstItem="d8w-xn-xk8" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="149" id="lOj-9i-ueU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="angleLabel" destination="YND-6D-3dB" id="ry4-A1-h71"/>
                         <outlet property="angleSlider" destination="sT1-w5-6TI" id="cJ8-px-AUg"/>
                         <outlet property="launchButton" destination="px7-Dp-wM3" id="yqz-O1-iyU"/>
+                        <outlet property="player1Score" destination="d8w-xn-xk8" id="fEN-40-1kn"/>
+                        <outlet property="player2Score" destination="iHx-QI-sye" id="LNe-25-hdI"/>
                         <outlet property="playerNumber" destination="kpL-Iw-N7U" id="gY5-VS-oE1"/>
                         <outlet property="velocityLabel" destination="QFf-hE-kje" id="2X6-tf-rHw"/>
                         <outlet property="velocitySlider" destination="IyJ-XZ-GzU" id="VRW-lP-nT5"/>

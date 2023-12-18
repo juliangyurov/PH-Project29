@@ -35,6 +35,21 @@ class GameViewController: UIViewController {
         currentGame?.launch(angle: Int(angleSlider.value), velocity: Int(velocitySlider.value))
     }
     
+    @IBOutlet var player1Score: UILabel!
+    
+    @IBOutlet var player2Score: UILabel!
+    
+    var score1 = 0 {
+        didSet {
+            player1Score.text = "Score1: \(score1)"
+        }
+    }
+    var score2 = 0 {
+        didSet {
+            player2Score.text = "Score2: \(score2)"
+        }
+    }
+    
     func activatePlayer(number: Int) {
         if number == 1 {
             playerNumber.text = "<<< PLAYER ONE"

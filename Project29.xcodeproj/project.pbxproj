@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35B1E96E2B30C2D5005CE848 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B1E96D2B30C2D5005CE848 /* GameOverScene.swift */; };
 		35B31D1A2B2F69C400C88B21 /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 35B31D182B2F69C400C88B21 /* hitBuilding.sks */; };
 		35B31D1B2B2F69C400C88B21 /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = 35B31D192B2F69C400C88B21 /* hitPlayer.sks */; };
 		35B4A0112B2E01A000262B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B4A0102B2E01A000262B6E /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35B1E96D2B30C2D5005CE848 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		35B31D182B2F69C400C88B21 /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
 		35B31D192B2F69C400C88B21 /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
 		35B4A00D2B2E01A000262B6E /* Project29.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project29.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				35B4A0102B2E01A000262B6E /* AppDelegate.swift */,
 				35B4A0122B2E01A100262B6E /* GameScene.sks */,
 				35B4A0162B2E01A100262B6E /* GameScene.swift */,
+				35B1E96D2B30C2D5005CE848 /* GameOverScene.swift */,
 				35B4A0272B2E044300262B6E /* BuildingNode.swift */,
 				35B4A0182B2E01A100262B6E /* GameViewController.swift */,
 				35B4A01A2B2E01A100262B6E /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B1E96E2B30C2D5005CE848 /* GameOverScene.swift in Sources */,
 				35B4A0172B2E01A100262B6E /* GameScene.swift in Sources */,
 				35B4A0282B2E044300262B6E /* BuildingNode.swift in Sources */,
 				35B4A0192B2E01A100262B6E /* GameViewController.swift in Sources */,
