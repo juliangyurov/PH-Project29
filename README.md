@@ -10,11 +10,11 @@ Written by [Paul Hudson](https://www.hackingwithswift.com/about)  ![twitter16](h
 
 - Mixing `UIKit` and `SpriteKit`: `UISlider` and `SKView`
 
-Unleash the bananas: `SpriteKit` texture atlases
+- Unleash the bananas: `SpriteKit` texture atlases
 
-Destructible terrain: `presentScene()`
+- Destructible terrain: `presentScene()`
 
-Wrap up
+- Wrap up
   
 ## [Review what you learned](https://www.hackingwithswift.com/review/hws/project-29-exploding-monkeys)
 
