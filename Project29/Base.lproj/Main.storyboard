@@ -59,21 +59,32 @@
                                             <constraint firstItem="IyJ-XZ-GzU" firstAttribute="width" secondItem="BM1-bE-llM" secondAttribute="width" multiplier="0.7" constant="-15" id="sMb-VL-Rvo"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px7-Dp-wM3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-3i-ITZ">
                                         <rect key="frame" x="692" y="0.0" width="341" height="40.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="LAUNCH">
-                                            <color key="titleColor" systemColor="systemRedColor"/>
-                                        </state>
-                                        <buttonConfiguration key="configuration" style="plain" title="LAUNCH">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
-                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="launch:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TVG-w1-SFA"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uI-6O-p4I">
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="40.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px7-Dp-wM3">
+                                                <rect key="frame" x="173" y="0.0" width="168" height="40.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="LAUNCH">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="plain" title="LAUNCH">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="launch:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TVG-w1-SFA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt;&lt; PLAYER ONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpL-Iw-N7U">
@@ -127,6 +138,7 @@
                         <outlet property="playerNumber" destination="kpL-Iw-N7U" id="gY5-VS-oE1"/>
                         <outlet property="velocityLabel" destination="QFf-hE-kje" id="2X6-tf-rHw"/>
                         <outlet property="velocitySlider" destination="IyJ-XZ-GzU" id="VRW-lP-nT5"/>
+                        <outlet property="windLabel" destination="1uI-6O-p4I" id="0kN-QQ-Ofd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

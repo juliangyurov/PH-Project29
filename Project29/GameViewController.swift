@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet var velocityLabel: UILabel!
     @IBOutlet var launchButton: UIButton!
     @IBOutlet var playerNumber: UILabel!
+    @IBOutlet var windLabel: UILabel!
     
     @IBAction func angleChanged(_ sender: Any) {
         angleLabel.text = "Angle: \(Int(angleSlider.value))°"
@@ -30,7 +31,7 @@ class GameViewController: UIViewController {
         velocitySlider.isHidden = true
         angleLabel.isHidden = true
         velocityLabel.isHidden = true
-        
+        windLabel.isHidden = true
         launchButton.isHidden = true
         currentGame?.launch(angle: Int(angleSlider.value), velocity: Int(velocitySlider.value))
     }
@@ -38,6 +39,12 @@ class GameViewController: UIViewController {
     @IBOutlet var player1Score: UILabel!
     
     @IBOutlet var player2Score: UILabel!
+    
+    var wind: CGFloat = 0.00 {
+        didSet {
+            windLabel.text = "Wind: \(wind)"
+        }
+    }
     
     var score1 = 0 {
         didSet {
@@ -60,7 +67,7 @@ class GameViewController: UIViewController {
         velocitySlider.isHidden = false
         angleLabel.isHidden = false
         velocityLabel.isHidden = false
-        
+        windLabel.isHidden = false
         launchButton.isHidden = false
     }
     
@@ -82,6 +89,7 @@ class GameViewController: UIViewController {
                 // Here we add connection GameScene <--> GameViewController
                 currentGame = scene as? GameScene
                 currentGame?.viewController = self
+                wind = CGFloat.rounded(currentGame?.gravityVector.dx ?? 0.00)()  
             }
             
             view.ignoresSiblingOrder = true

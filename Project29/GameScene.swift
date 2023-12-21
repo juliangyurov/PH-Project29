@@ -19,15 +19,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player1: SKSpriteNode!
     var player2: SKSpriteNode!
     var banana: SKSpriteNode!
+    var gravityVector = CGVector(dx: 0.0, dy: -9.8)
     
     var currentPlayer = 1
     
     override func didMove(to view: SKView) {
+        
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         createBuildings()
         createPlayers()
         
         physicsWorld.contactDelegate = self
+        
+        gravityVector = CGVector(dx: Float64.random(in: -5.0...5.0), dy: -9.8)
+        
+        physicsWorld.gravity = gravityVector
+        self.viewController?.wind = CGFloat.rounded(gravityVector.dx)()
     }
     func createBuildings() {
         var currentX: CGFloat = -15
